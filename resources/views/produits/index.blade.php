@@ -10,6 +10,11 @@
 
 <body>
     <h1>All Products</h1>
+    @if (session('success'))
+        <h1 id="message" style="padding: 12px; background-color: yellow;">
+            {{ session('message') }}
+        </h1>
+    @endif
     <button><a style="text-decoration: none; color: black;" href="{{ route('produits.create') }}">Ajouter un
             produit</a></button>
     <table border="1">
